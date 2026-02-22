@@ -27,11 +27,14 @@ export default function AboutPage() {
             zeal for science was contagious and I do not recall any of his
             students that didn&rsquo;t like him. My first and only research
             project was to do a website for his Master&rsquo;s thesis having to
-            do with player reacting to various situations in playing poker.
+            do with player reacting to various situations in playing poker. I
+            was stunned to hear of his passing and feel that science lost a star
+            professor.
           </p>
           <p>
-            I was stunned to hear of his passing and feel that science lost a
-            star professor.
+            I also wish to thank my professor, Dr. Trina Geye, also of Tarleton
+            State University, whose Psycholinguistics class and advice on my
+            senior capstone project were essential to my programming career.
           </p>
         </div>
       </article>
