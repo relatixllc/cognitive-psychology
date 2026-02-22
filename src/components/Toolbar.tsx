@@ -67,6 +67,14 @@ export default function Toolbar() {
               </div>
             </div>
           ))}
+          <Link
+            href="/about"
+            className="mt"
+            style={{ textDecoration: "none" }}
+            onClick={() => { setOpenIdx(null); setMobileOpen(false); }}
+          >
+            About
+          </Link>
         </div>
       </div>
     </div>
