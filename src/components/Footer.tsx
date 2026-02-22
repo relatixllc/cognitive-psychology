@@ -9,7 +9,7 @@ export default function Footer() {
           &ldquo;The mind is not a vessel to be filled, but a fire to be kindled.&rdquo; <span>&mdash; Plutarch</span>
         </p>
         <p className="footer-attr">
-          CognitivePsychology.info is a project of{" "}
+          CognitivePsychology.com is a project of{" "}
           <a href="https://www.relatix.com" target="_blank" rel="noopener noreferrer">
             Relatix LLC
           </a>

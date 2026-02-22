@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.cognitivepsychology.com"),
   title: "Cognitive Psychology — A Complete Reference",
   description:
     "A comprehensive reference to cognitive psychology: perception, attention, memory, learning, language, thinking, development, neuroscience, and modern applications.",
