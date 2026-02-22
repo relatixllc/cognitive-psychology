@@ -38,6 +38,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           strategy="afterInteractive"
         />
         <meta name="google-adsense-account" content="ca-pub-1296356819566983" />
+        <Script
+          id="gtag"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-6ZK0DVVZ1P"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6ZK0DVVZ1P');`,
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
