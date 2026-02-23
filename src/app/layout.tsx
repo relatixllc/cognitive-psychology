@@ -54,7 +54,7 @@ gtag('js', new Date());
 gtag('config', 'G-6ZK0DVVZ1P');`,
           }}
         />
-        <meta name="impact-site-verification" value="166f0f6b-359a-4b6e-8be2-0a4407fdd5cf" />
+        <meta name="impact-site-verification" content="166f0f6b-359a-4b6e-8be2-0a4407fdd5cf" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
