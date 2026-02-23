@@ -125,7 +125,7 @@ export default function Home() {
       </nav>
 
       {/* ── Content ── */}
-      <main className="mc">
+      <div className="mc">
         {/* Key Concepts */}
         {activeSection === "concepts" && (
           <div>
@@ -244,7 +244,7 @@ export default function Home() {
             </div>
           </div>
         )}
-      </main>
+      </div>
     </>
   );
 }

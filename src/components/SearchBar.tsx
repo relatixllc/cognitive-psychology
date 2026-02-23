@@ -94,6 +94,7 @@ export default function SearchBar({ onFocus }: { onFocus?: () => void }) {
         className="search-bar-input"
         type="text"
         placeholder="Search articles..."
+        aria-label="Search articles"
         value={query}
         onChange={(e) => {
           setQuery(e.target.value);

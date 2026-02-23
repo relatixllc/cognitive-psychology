@@ -73,8 +73,8 @@ export default function CalcShell({
       <p className="bayes-calc-desc" dangerouslySetInnerHTML={{ __html: description }} />
       <div className="bayes-calc-grid">
         <div className="bayes-calc-input">
-          <label className="bayes-calc-label">{dataLabel || "Dataset (CSV)"}</label>
-          <textarea className="bayes-calc-textarea" value={data} onChange={(e) => setData(e.target.value)} spellCheck={false} disabled={animating} />
+          <label className="bayes-calc-label" htmlFor="calc-data">{dataLabel || "Dataset (CSV)"}</label>
+          <textarea id="calc-data" className="bayes-calc-textarea" value={data} onChange={(e) => setData(e.target.value)} spellCheck={false} disabled={animating} />
           <div className="bayes-calc-btns">
             <button className="bayes-calc-btn" onClick={calculate} disabled={animating}>Calculate</button>
             <button className={`bayes-calc-btn bayes-calc-btn-anim${animating ? " active" : ""}`} onClick={animating ? stopAnimation : animate}>

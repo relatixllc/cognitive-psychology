@@ -74,8 +74,9 @@ gtag('config', 'G-6ZK0DVVZ1P');`,
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <Toolbar />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

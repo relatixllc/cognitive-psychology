@@ -4,6 +4,11 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { topMenus } from "@/data/menus";
 import SearchBar from "./SearchBar";
+import TextSizer from "./TextSizer";
+import ContrastToggle from "./ContrastToggle";
+import BoldnessToggle from "./BoldnessToggle";
+import ThemeToggle from "./ThemeToggle";
+import ImmersiveToggle from "./ImmersiveToggle";
 
 export default function Toolbar() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -30,10 +35,16 @@ export default function Toolbar() {
           Cognitive <i>Psychology</i>
         </Link>
         <SearchBar onFocus={() => setOpenIdx(null)} />
+        <TextSizer />
+        <BoldnessToggle />
+        <ThemeToggle />
+        <ContrastToggle />
+        <ImmersiveToggle />
         <button
           className="hamburger"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
+          aria-expanded={mobileOpen}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M3 12h18M3 6h18M3 18h18" />
@@ -42,7 +53,11 @@ export default function Toolbar() {
         <div className={`toolbar-menus${mobileOpen ? " mob" : ""}`}>
           {topMenus.map((menu, i) => (
             <div key={menu.title} className={`mi${openIdx === i ? " open" : ""}${alignRight(i) ? " ar" : ""}`}>
-              <button className="mt" onClick={() => toggle(i)}>
+              <button
+                className="mt"
+                onClick={() => toggle(i)}
+                aria-expanded={openIdx === i}
+              >
                 {menu.title}
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="m6 9 6 6 6-6" />
