@@ -144,6 +144,16 @@ export default function Home() {
                   {v.formula && (
                     <div className="fbl"><code>{v.formula}</code></div>
                   )}
+                  {v.references && v.references.length > 0 && (
+                    <div className="eb">
+                      <span className="el">References</span>
+                      <ul className="rl">
+                        {v.references.map((ref, i) => (
+                          <li key={i}>{ref}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                   {v.example && (
                     <div className="eb">
                       <span className="el">Example</span>
