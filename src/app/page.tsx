@@ -149,7 +149,7 @@ export default function Home() {
                       <span className="el">References</span>
                       <ul className="rl">
                         {v.references.map((ref, i) => (
-                          <li key={i}>{ref}</li>
+                          <li key={i} dangerouslySetInnerHTML={{ __html: ref }} />
                         ))}
                       </ul>
                     </div>
