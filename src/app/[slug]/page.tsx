@@ -110,6 +110,17 @@ export default async function TopicPage({ params }: Props) {
           <KeyFiguresCalc slug={slug} />
         </div>
 
+        {hasContent && topic.references && topic.references.length > 0 && (
+          <div className="article-references">
+            <h3>References</h3>
+            <ol className="references-list">
+              {topic.references.map((ref, i) => (
+                <li key={i} dangerouslySetInnerHTML={{ __html: ref }} />
+              ))}
+            </ol>
+          </div>
+        )}
+
         {hasContent && topic.related && topic.related.length > 0 && (
           <div className="article-related">
             <h3>Related Topics</h3>
