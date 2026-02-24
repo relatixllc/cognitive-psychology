@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -13,6 +15,10 @@ export default function Footer() {
           <a href="https://www.relatix.com" target="_blank" rel="noopener noreferrer">
             Relatix LLC
           </a>
+          {" "}&mdash;{" "}
+          <Link href="/Privacy_Policy">Privacy Policy</Link>
+          {" "}&mdash;{" "}
+          <Link href="/Contact_Us">Contact Us</Link>
         </p>
       </div>
     </footer>

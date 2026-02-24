@@ -456,6 +456,28 @@ html.theme-light .aside-box { background: #fff; }
 html.theme-light .md { background: #fff; }
 html.theme-light .related-card { background: #fff; }
 
+/* ── Cookie Consent Banner ── */
+@keyframes cookie-slide-up { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 300; background: rgba(10,10,15,.97); color: rgba(245,240,232,.9); border-top: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(12px); animation: cookie-slide-up .35s ease-out; }
+.cookie-banner-inner { max-width: 1200px; margin: 0 auto; padding: 1.1rem 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
+.cookie-banner-text { font: 400 .92rem/1.5 var(--sans); margin: 0; flex: 1; }
+.cookie-banner-text a { color: rgba(245,240,232,.95); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-banner-text a:hover { color: #fff; }
+.cookie-banner-buttons { display: flex; gap: .6rem; flex-shrink: 0; }
+.cookie-btn { font: 500 .85rem/1 var(--sans); padding: .6rem 1.1rem; border-radius: 6px; cursor: pointer; transition: background .15s, color .15s, border-color .15s; white-space: nowrap; }
+.cookie-btn-accept { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+.cookie-btn-accept:hover { background: #a83224; border-color: #a83224; }
+.cookie-btn-reject { background: transparent; color: rgba(245,240,232,.8); border: 1px solid rgba(255,255,255,.2); }
+.cookie-btn-reject:hover { border-color: rgba(255,255,255,.45); color: #fff; }
+html.high-contrast .cookie-banner { background: #000; border-top: 2px solid #fff; }
+html.high-contrast .cookie-btn-reject { border-color: #fff; color: #fff; }
+@media (max-width: 768px) {
+  .cookie-banner-inner { flex-direction: column; text-align: center; gap: .9rem; padding: 1rem; }
+  .cookie-banner-buttons { width: 100%; }
+  .cookie-btn { flex: 1; padding: .7rem .5rem; }
+}
+html.immersive .cookie-banner { display: none; }
+
 /* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
